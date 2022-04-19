@@ -1,0 +1,130 @@
+{
+  "mens": [
+    {
+      "id": 1,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 300,
+      "color": "pink"
+    },
+    {
+      "id": 2,
+      "img":  "https://assets.ajio.com/medias/sys_master/root/20210403/wR9I/606946fd7cdb8c1f1484121e/aks_couture_pink_embellished_a-line_dress_with_ruffled_panel.jpg",
+      "title": "HELLO DESIGN",
+      "price": 400,
+      "color": "pink"
+    },
+    {
+      "id": 3,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 500,
+      "color": "pink"
+    },
+    {
+      "id": 4,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 600,
+      "color": "black"
+    },
+    {
+      "id": 5,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 700,
+      "color": "pink"
+    },
+    {
+      "id": 6,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 800,
+      "color": "black"
+    },
+    {
+      "id": 7,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 900,
+      "color": "black"
+    },
+    {
+      "id": 8,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1000,
+      "color": "blue"
+    },
+    {
+      "id": 9,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1200,
+      "color": "blue"
+    },
+    {
+      "id": 10,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1300,
+      "color": "blue"
+    },
+    {
+      "id": 11,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1400,
+      "color": "red"
+    },
+    {
+      "id": 12,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1500,
+      "color": "red"
+    },
+    {
+      "id": 13,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1600,
+      "color": "red"
+    },
+    {
+      "id": 14,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1700,
+      "color": "green"
+    },
+    {
+      "id": 15,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1800,
+      "color": "green"
+    },
+    {
+      "id": 16,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1900,
+      "color": "yellow"
+    },
+    {
+      "id": 17,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 2000,
+      "color": "yellow"
+    },
+    {
+      "id": 18,
+      "img": "https: //assets.ajio.com/medias/sys_master/root/20210403/37g4/6068ca1aaeb269a9e338d88c/hello_design_pink_a-line_dress_with_ruffle_detail.jpg",
+      "title": "HELLO DESIGN",
+      "price": 1700,
+      "color": "yellow"
+    }
+  ]
+}
