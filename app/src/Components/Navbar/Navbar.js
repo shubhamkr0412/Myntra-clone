@@ -1,101 +1,80 @@
-import React from 'react';
-import {AppBar, InputBase, styled, Toolbar, Typography, Button, IconButton } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
-import StyledBadge from "@mui/material/Badge"
-
-
-
-
-
-
+import styled from "@emotion/styled";
+import { AppBar, Avatar, InputBase, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import React, { useState } from "react";
+import HomeIcon from '@mui/icons-material/Home';
+import { Box } from "@mui/system";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 const StyledToolbar = styled(Toolbar)({
-    display: "flex",
-    justifyContent:"space-between",
-    alignItems:"center",
-    boxSizing:"border-box"
-  });
-
-
-
-const Search = styled("div")(({theme})=>({
-  display:"flex",
-  justifyContent:"space-around",
-  alignItems:"center",
-  backgroundColor: "#f4f4f4",
-  padding:"5px 10px",
-  borderRadius: theme.shape.borderRadius,
-  width:"20%"
-
-}));
+  display: "flex",
+  justifyContent: "space-between",
+});
+const Search=styled("div")(({theme})=>({
+    backgroundColor:"white",
+    padding:"0 10px",
+ width:"40%"
+   
+}))
+const Icons=styled(Box)(({theme})=>({
+    backgroundColor:"white",
+   
+}))
 
 const Navbar = () => {
-  
-    return (
-    <>
-      <AppBar position="sticky" color="primary">
-        <StyledToolbar>
-
-          <Typography variant="h6" sx={{display:{xs:"block", sm:"none"}}}>
-               <img width={"40px"} border-radius={"50%"} src="https://image.winudf.com/v2/image1/Y29tLmZzbi5uZHNfaWNvbl8xNjQwMzAwMTQ1XzA0OQ/icon.png?w=&fakeurl=1" alt="" />
-          </Typography>
-
-          <StyledToolbar sx={{width:"45%"}}>
-
-          <Typography variant="h6" sx={{display:{xs:"none", sm:"block"}}}>
-              <img width={"100px"} src="https://cdn.worldvectorlogo.com/logos/nykaa-1.svg" alt="" />
-          </Typography>
-
-          <Typography variant="span" sx={{display:{xs:"none", sm:"block"}}}>
-          <StyledToolbar sx={{width:"120%", fontSize:"15px",}}>
-             <p><b> Categories</b></p>
-             <p><b> Brands</b></p>
-             <p><b>Myntra Fashion</b> </p>
-             <p><b> Beauty Advice</b></p>
-             <p><b> Myntra Network</b></p>
-          </StyledToolbar>
-          </Typography>
-          </StyledToolbar>
-
-          <Search ><SearchIcon/><InputBase placeholder='Search...'/></Search>
-             
-
-          <StyledToolbar sx={{width:"15%"}}>
-          <Button sx={{color:"black", fontFamily:"san-serif"}} startIcon={<PersonIcon/>} variant="text">Account</Button>
-
-            <IconButton aria-label="cart">
-              <StyledBadge badgeContent={4} color="neutral">
-              <LocalMallIcon color='otherColor' />
-              </StyledBadge>
-            </IconButton>
-          </StyledToolbar>
-          
-        </StyledToolbar>
-        
-      </AppBar>
-      <AppBar sx={{marginTop:"65px"}} color="primary">
-        <StyledToolbar>
-            <p>Makeup</p>
-            <p>Skin</p>
-            <p>Hair</p>
-            <p>Appliances</p>
-            <p>Personal Care</p>
-            <p>Natural</p>
-            <p>Mom & Baby</p>
-            <p>Health & Wellness</p>
-            <p>Men</p>
-            <p>Fragrance</p>
-            <p>LUXE</p>
-            <p><img width={"70px"} src="https://www.kindpng.com/picc/m/112-1127467_logo-brand-font-product-transparent-sale-clip-art.png" alt="" /></p>
-         
-        </StyledToolbar>
-      </AppBar>
-    </>
+    const [open,setOpen]=useState(false);
+  return (
+    <AppBar position="sticky">
+      <StyledToolbar>
+      <Avatar sx={{width:50, height:50}} src="https://images.indianexpress.com/2021/01/myntra.png"/>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          Men
+        </Typography>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          Women
+        </Typography>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          Kids
+        </Typography>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          Home & Living
+        </Typography>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          Beauty
+        </Typography>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          Studio
+        </Typography>
    
-            
+   <Search><InputBase placeholder="search..."/></Search>
+   
+   <PermIdentityIcon onClick={e=>setOpen(true)}/>
+  
+   <FavoriteBorderIcon/>
+   <ShoppingBagIcon/>
+   <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
         
-    );
-}
+         open={open}
+        onClose={e=>setOpen(false)}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuItem >Profile</MenuItem>
+        <MenuItem >My account</MenuItem>
+        <MenuItem >Logout</MenuItem>
+      </Menu>
+      </StyledToolbar>
+      
+    </AppBar>
+  );
+};
 
 export default Navbar;
