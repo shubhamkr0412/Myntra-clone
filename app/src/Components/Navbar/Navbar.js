@@ -51,9 +51,9 @@ const Navbar = () => {
           <StyledToolbar sx={{width:"120%", fontSize:"15px",}}>
              <p><b> Categories</b></p>
              <p><b> Brands</b></p>
-             <p><b>Nykaa Fashion</b> </p>
+             <p><b>Myntra Fashion</b> </p>
              <p><b> Beauty Advice</b></p>
-             <p><b> Nykaa Network</b></p>
+             <p><b> Myntra Network</b></p>
           </StyledToolbar>
           </Typography>
           </StyledToolbar>
