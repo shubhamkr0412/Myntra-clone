@@ -2,7 +2,7 @@
 import './App.css';
 import {useSelector,useDispatch} from "react-redux"
 import {incNumber,decNumber} from "./Redux/actions/index"
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 
 
 function App() {
