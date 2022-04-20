@@ -12,7 +12,7 @@ const MensProduct = () => {
   }, [page]);
 
   const getMensData = () => {
-    fetch(`http://localhost:3003/mens?_page=${page}&_limit=9`)
+    fetch(`http://localhost:3005/mens?_page=${page}&_limit=9`)
       .then((d) => d.json())
       .then((res) => {
         setLists(res);
