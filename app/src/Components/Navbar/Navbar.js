@@ -3,6 +3,7 @@ import { AppBar, Avatar, InputBase, Menu, MenuItem, Toolbar, Typography } from "
 import React, { useState } from "react";
 import HomeIcon from '@mui/icons-material/Home';
 import { Box } from "@mui/system";
+
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
@@ -23,6 +24,7 @@ const Icons=styled(Box)(({theme})=>({
 
 const Navbar = () => {
     const [open,setOpen]=useState(false);
+    const filter=0;
   return (
     <AppBar position="sticky">
       <StyledToolbar>
