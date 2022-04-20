@@ -4,14 +4,18 @@ import SideBar from '../Navbar/SideBar'
 import MensProduct from './MensProduct'
 import "./MensPage.css";
 
+
+
 const MensPage = () => {
+  
+  
   return (
     <div><Navbar/>
     <div className='griid'>
     
         
         <div><SideBar/></div>
-        <div><MensProduct/></div>
+        <div className='flux'><MensProduct/></div>
     </div></div>
   )
 }
