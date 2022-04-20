@@ -18,13 +18,7 @@ const SideBar = () => {
         setLists(res);
       });
   };
-  const filterItem=(category)=>{
-    const updatedList= lists.filter((currElem)=>{
-       return currElem.Category===category;
-     })
-     setLists(updatedList);
-    
-   }
+  
   return (
     <Box bgcolor="skyblue"
     flex={1}
