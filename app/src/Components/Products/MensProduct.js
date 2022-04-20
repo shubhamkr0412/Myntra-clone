@@ -34,7 +34,7 @@ const MensProduct = () => {
                 <div className="items">
                   <p>
                     <span>Category:</span>
-                    {curr.color}
+                    {curr.Category}
                   </p>
                 </div>
                 <div className="items">
