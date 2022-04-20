@@ -1,11 +1,11 @@
 .griid{
     background-color: black;
     display: flex;
-    flex-direction: row;
+ 
     
   }
   .flux{
-    width:90%;
+    width:80%;
   }
   .containerr{
     display:grid;
@@ -27,7 +27,9 @@
   }
   .items{
     text-align: center;
-    max-height:100%; max-width:100%;
+    width:380px;
+   
+   
   }
   .btn{
     display:flex;
@@ -53,3 +55,4 @@
   .btn button:hover{
     background-color: aqua;
   }
+ 

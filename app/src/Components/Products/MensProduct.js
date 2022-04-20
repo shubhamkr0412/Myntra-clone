@@ -1,49 +1,61 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import SideBar from '../Navbar/SideBar'
+import React from "react";
+import Navbar from "../Navbar/Navbar";
+import SideBar from "../Navbar/SideBar";
 import "./MensPage.css";
-import { useEffect } from 'react';
-import { useState } from 'react'
+import { useEffect } from "react";
+import { useState } from "react";
 const MensProduct = () => {
-  const[lists,setLists]=useState([]);
+  const [lists, setLists] = useState([]);
+  const [page, setPage] = useState(1);
   useEffect(() => {
-   getMensData();
-  }, []);
+    getMensData();
+  }, [page]);
 
-  const getMensData=()=>{
-    fetch("http://localhost:3003/mens").then((d)=>d.json())
-    .then((res)=>{
-      setLists(res);
-    })
-  }
+  const getMensData = () => {
+    fetch(`http://localhost:3003/mens?_page=${page}&_limit=9`)
+      .then((d) => d.json())
+      .then((res) => {
+        setLists(res);
+      });
+  };
   return (
     <>
-    <div className='containerr'>
-    {
-        lists.map((curr)=>{
-            return (
-                <>
-                
-            
-                <img src={curr.img} alt="images"/>
-     <div className='items' key={curr.id}>
-        
-         <p className='items'><span>Name:</span>{curr.title}</p>
-         <p className='items'><span>Category:</span>{curr.color}</p>
-         <p className='items'><span>Price:</span>{curr.price}</p>
-     
-        
-     </div>
-    
-    
-  
- 
-  </>)
-        })
-    }
-    </div>
+      <div className="containerr">
+        {lists.map((curr) => {
+          return (
+            <>
+              <div className="inside" key={curr.id}>
+                <div className="items">
+                  <p>
+                    <span>Name:</span>
+                    {curr.title}
+                  </p>
+                </div>
+                <div className="items">
+                  <p>
+                    <span>Category:</span>
+                    {curr.color}
+                  </p>
+                </div>
+                <div className="items">
+                  {" "}
+                  <p>
+                    <span>Price:</span>
+                    {curr.price}
+                  </p>
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </div>
+      <div style={{ marginLeft: "550px" }}>
+        {" "}
+        <button disabled={page===1} onClick={()=>setPage(page-1)}>Prev</button>
+        <button disabled={page===2} onClick={()=>setPage(page+1)}>Next</button>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default MensProduct
+export default MensProduct;
