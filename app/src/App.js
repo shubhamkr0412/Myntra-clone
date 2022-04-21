@@ -16,10 +16,10 @@ function App() {
   const dispatch=useDispatch();
   return (
     
-    <Box>
+    <div>
    {/* <HomePage/> */}
    <MensPage/>
-    </Box>
+    </div>
   );
 }
 

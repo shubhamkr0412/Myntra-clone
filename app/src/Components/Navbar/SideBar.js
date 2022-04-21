@@ -26,7 +26,7 @@ const SideBar = () => {
     sx={{width: "150px"}}
     > <List  >
         <ListItem disablePadding>
-            <ListItemButton onClick={()=>filterItem("Shirts")}>
+            <ListItemButton >
               
               <ListItemText primary="Shirts" />
             </ListItemButton>
