@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 const SideBar = () => {
   const [lists, setLists] = useState([]);
+  const arr=[];
   console.log(lists);
   useEffect(() => {
     getMensData();
