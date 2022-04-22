@@ -7,16 +7,34 @@ import { useEffect } from 'react';
 
 
 const MensPage = () => {
- 
+  const [page, setPage] = useState(1);
+  const [menuData,setMenuData] = useState([]);
+  useEffect(() => {
+    getsData();
+  }, [page]);
+
+  const getsData = () => {
+    fetch(`http://localhost:3005/mens?_page=${page}&_limit=9`)
+      .then((d) => d.json())
+      .then((res) => {
+        setMenuData(res);
+      });
+  };
+  console.log(menuData);
   
   return (
     <div><Navbar/>
     <div className='griid'>
     
         
-        <div><SideBar/></div>
-        <div><MensProduct/></div>
-    </div></div>
+        <div><SideBar menuData={menuData} /></div>
+        <div><MensProduct menuData={menuData} /></div>
+    </div>
+    <div style={{ marginLeft: "600px" }}>
+        {" "}
+        <button disabled={page===1} onClick={()=>setPage(page-1)}>Prev</button>
+        <button disabled={page===2} onClick={()=>setPage(page+1)}>Next</button>
+      </div></div>
   )
 }
 
