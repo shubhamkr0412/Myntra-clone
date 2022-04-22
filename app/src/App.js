@@ -1,14 +1,22 @@
 
 import './App.css';
 import {useSelector,useDispatch} from "react-redux"
-import {incNumber,decNumber} from "./Redux/actions/index"
-import Navbar from './Components/Navbar/Navbar';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Link
+} from 'react-router-dom';
+
 import { Button, Stack } from '@mui/material';
-import SideBar from './Components/Navbar/SideBar';
+
 import MensProduct from './Components/Products/MensProduct';
 import { Box } from '@mui/system';
 import HomePage from './Components/HomePage/HomePage';
 import MensPage from './Components/Products/MensPage';
+import WomensPage from './Components/Products/WomensPage';
+import KidsPage from './Components/Products/KidsPage';
+import Navbar from './Components/Navbar/Navbar';
 
 
 function App() {
@@ -17,8 +25,14 @@ function App() {
   return (
     
     <div>
-   {/* <HomePage/> */}
-   <MensPage/>
+    <Routes>
+   
+    <Route exact path="/" element={< HomePage />}/> 
+    <Route exact path="/mens" element={< MensPage />}/> 
+    <Route exact path="/womens" element={< WomensPage />}/> 
+    <Route exact path="/kids" element={< KidsPage />}/> 
+    
+    </Routes>
     </div>
   );
 }
