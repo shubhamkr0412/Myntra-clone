@@ -7,9 +7,11 @@ import { Box } from "@mui/system";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import { Link } from 'react-router-dom';
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
+  backgroundColor:"lightgray",
 });
 const Search=styled("div")(({theme})=>({
     backgroundColor:"white",
@@ -25,28 +27,37 @@ const Icons=styled(Box)(({theme})=>({
 const Navbar = () => {
     const [open,setOpen]=useState(false);
     const filter=0;
+ 
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-      <Avatar sx={{width:50, height:50}} src="https://images.indianexpress.com/2021/01/myntra.png"/>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Men
-        </Typography>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+      <Link to='/'><Avatar sx={{width:50, height:50}} src="https://images.indianexpress.com/2021/01/myntra.png"/></Link>
+      
+      <Link to='/mens'><Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        Men
+      </Typography></Link>
+      <Link to='/womens'> <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           Women
-        </Typography>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        </Typography></Link>
+        <Link to='/kids'> <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           Kids
-        </Typography>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Home & Living
-        </Typography>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Beauty
-        </Typography>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Studio
-        </Typography>
+        </Typography></Link>
+        <Link to='/kids'> <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        Home & Living
+        </Typography></Link>
+        <Link to='/kids'> <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+       Beauty
+        </Typography></Link>
+      
+        <Link to='/kids'> <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        Studio
+        </Typography></Link>
+       
+       
+        
+       
+       
+       
    
    <Search><InputBase placeholder="search..."/></Search>
    
