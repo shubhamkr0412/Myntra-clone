@@ -1,5 +1,6 @@
 import React from "react";
 import "./MensPage.css";
+import { Link } from "react-router-dom";
 
 const MensProduct = ({ lists, addToCart }) => {
 
@@ -12,7 +13,8 @@ const MensProduct = ({ lists, addToCart }) => {
             <>
               <div className="inside" key={curr.id}>
               <div className="items">
-                 <img width={"60%"} src={curr.img}/>
+              <Link to ={`/mens/${curr.id}`}> <img width={"60%"} src={curr.img}/></Link>
+                
                 </div>
                 <div className="items">
                   <p>
@@ -36,8 +38,8 @@ const MensProduct = ({ lists, addToCart }) => {
                 <div className="items">
                   {" "}
                   <p>
-                    <span>Add to Cart:</span>
-                    <button onClick={() => addToCart(curr)}>+</button>
+                    
+                    <button onClick={() => addToCart(curr)}>Add to cart</button>
                   </p>
                 </div>
               </div>
@@ -45,7 +47,6 @@ const MensProduct = ({ lists, addToCart }) => {
           );
         })}
       </div>
-      
     </>
   );
 };

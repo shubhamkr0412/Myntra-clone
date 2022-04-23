@@ -7,7 +7,6 @@ import { useState } from "react";
 export const KidsProduct = () => {
     const [women, setWomen] = useState([]);
     const [pages, setPages] = useState(1);
-  
     useEffect(() => {
       getWomensData();
     }, [pages]);

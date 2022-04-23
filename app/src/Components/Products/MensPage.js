@@ -4,7 +4,14 @@ import SideBar from '../Navbar/SideBar'
 import MensProduct from './MensProduct'
 import "./MensPage.css";
 import { useEffect } from 'react';
+import styled from '@emotion/styled';
 
+const Button=styled("button")({
+  width:"100px",
+  height:"30px",
+  backgroundColor:"coral",
+  margin:"40px 50px "
+})
 
 const MensPage = () => {
 
@@ -20,21 +27,21 @@ const MensPage = () => {
   const getMensData = (page = 1, Category = null, price = null) => {
     if (!Category && !price) {
       // console.log(page);
-      fetch(`https://mmyntraclone.herokuapp.com/mens?_page=${page}&_limit=9`)
+      fetch(` http://localhost:3001/mens?_page=${page}&_limit=9`)
         .then((d) => d.json())
         .then((res) => {
           setLists(res);
         });
       // console.log('Called top');
     } else if (Category !== null) {
-      fetch(`https://mmyntraclone.herokuapp.com/mens?Category=${Category}`)
+      fetch(` http://localhost:3001/mens?Category=${Category}`)
         .then((d) => d.json())
         .then((res) => {
           setLists(res);
         });
       // console.log('Called Category');
     } else if (price !== null) {
-      fetch(`https://mmyntraclone.herokuapp.com/mens`)
+      fetch(` http://localhost:3001/mens`)
         .then((d) => d.json())
         .then((res) => {
           const x = res.filter(setRange);
@@ -79,8 +86,8 @@ const MensPage = () => {
       </div>
       <div style={{ marginLeft: "550px" }}>
         {" "}
-        <button disabled={page === 1 || lists.length !== 9} onClick={() => { setPage(1); getMensData(1, null, null); }}>Prev</button>
-        <button disabled={page === 2 || lists.length !== 9} onClick={() => { setPage(2); getMensData(2, null, null); }}>Next</button>
+        <Button disabled={page === 1 || lists.length !== 9} onClick={() => { setPage(1); getMensData(1, null, null); }}>Prev</Button>
+        <Button disabled={page === 2 || lists.length !== 9} onClick={() => { setPage(2); getMensData(2, null, null); }}>Next</Button>
       </div>
       {/* <div className='container'>
         Cart Items:

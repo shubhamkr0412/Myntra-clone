@@ -17,21 +17,22 @@ import MensPage from './Components/Products/MensPage';
 import WomensPage from './Components/Products/WomensPage';
 import KidsPage from './Components/Products/KidsPage';
 import Navbar from './Components/Navbar/Navbar';
+import ProductDetails from './Components/Productdetails/ProductDetails';
 
 
 function App() {
-  
-
+  const myState=useSelector((state)=>state.changeTheNumber);
+  const dispatch=useDispatch();
   return (
     
     <div>
     <Routes>
    
-    <Route exact path="/" element={< HomePage/>}/> 
+    <Route exact path="/" element={< HomePage />}/> 
     <Route exact path="/mens" element={< MensPage />}/> 
     <Route exact path="/womens" element={< WomensPage />}/> 
     <Route exact path="/kids" element={< KidsPage />}/> 
-    
+    <Route  path="/mens/:id" element={< ProductDetails />}/> 
     </Routes>
     </div>
   );
