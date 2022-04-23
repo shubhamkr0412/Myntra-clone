@@ -3,10 +3,15 @@ import Navbar from '../Navbar/Navbar'
 import SideBar from '../Navbar/SideBar'
 import MensProduct from './MensProduct'
 import "./MensPage.css";
+
+import dataSlider from '../Slider/dataSlider'
+
 import { useEffect } from 'react';
 
 
+
 const MensPage = () => {
+  const [data, setData] = useState(dataSlider);
   const [page, setPage] = useState(1);
   const [menuData,setMenuData] = useState([]);
   useEffect(() => {
@@ -24,9 +29,10 @@ const MensPage = () => {
   
   return (
     <div><Navbar/>
+ 
     <div className='griid'>
     
-        
+    
         <div><SideBar menuData={menuData} /></div>
         <div><MensProduct menuData={menuData} /></div>
     </div>

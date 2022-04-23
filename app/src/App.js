@@ -17,6 +17,8 @@ import MensPage from './Components/Products/MensPage';
 import WomensPage from './Components/Products/WomensPage';
 import KidsPage from './Components/Products/KidsPage';
 import Navbar from './Components/Navbar/Navbar';
+import Slider from './Components/Slider/Slider';
+import dataSlider from './Components/Slider/dataSlider';
 
 
 function App() {
@@ -25,14 +27,15 @@ function App() {
   return (
     
     <div>
-    <Routes>
+    {/* <Routes>
    
     <Route exact path="/" element={< HomePage />}/> 
     <Route exact path="/mens" element={< MensPage />}/> 
     <Route exact path="/womens" element={< WomensPage />}/> 
     <Route exact path="/kids" element={< KidsPage />}/> 
     
-    </Routes>
+    </Routes> */}
+    <Slider data={dataSlider} num={7}/>
     </div>
   );
 }
