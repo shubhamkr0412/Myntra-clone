@@ -29,6 +29,7 @@ export const WomensProduct = () => {
         <>
           <div className="inside" key={curr.id}>
             <div className="items">
+            <img width={"50%"} src={curr.img}/>
               <p>
                 <span>Name:</span>
                 {curr.title}

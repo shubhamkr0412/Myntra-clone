@@ -11,6 +11,10 @@ const MensProduct = ({ lists, addToCart }) => {
           return (
             <>
               <div className="inside" key={curr.id}>
+              <div className="items">
+                <img width={"50%"} src={curr.img}/>
+                </div>
+
                 <div className="items">
                   <p>
                     <span>Name:</span>
