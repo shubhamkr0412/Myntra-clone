@@ -1,24 +1,21 @@
 import React from 'react'
 import { Box } from "@mui/system";
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import Home from '@mui/icons-material/Home';
-import { useEffect } from "react";
-import { useState } from "react";
-const SideBar = () => {
-  const [lists, setLists] = useState([]);
-  const arr=[];
-  console.log(lists);
-  useEffect(() => {
-    getMensData();
-  }, []);
+const SideBar = ({getMensData}) => {
+  // const [lists, setLists] = useState([]);
+  // const arr=[];
+  // console.log(lists);
+  // useEffect(() => {
+  //   getMensData();
+  // }, []);
 
-  const getMensData = () => {
-    fetch("http://localhost:3003/mens")
-      .then((d) => d.json())
-      .then((res) => {
-        setLists(res);
-      });
-  };
+  // const getMensData = () => {
+  //   fetch("http://localhost:3005/")
+  //     .then((d) => d.json())
+  //     .then((res) => {
+  //       setLists(res);
+  //     });
+  // };
   
   return (
     <Box bgcolor="skyblue"
@@ -26,31 +23,31 @@ const SideBar = () => {
     p={2}
     sx={{width: "150px"}}
     > <List  >
-        <ListItem disablePadding>
+        <ListItem key={0} disablePadding>
             <ListItemButton >
               
-              <ListItemText primary="Shirts" />
+              <ListItemText onClick={() => {getMensData(1, "Shirts")}} primary="Shirts" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem key={1} disablePadding>
             <ListItemButton>
               
-              <ListItemText primary="Jeans" />
+              <ListItemText onClick={() => {getMensData(1, "Jeans")}} primary="Jeans" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem key={2} disablePadding>
             <ListItemButton>
               
-              <ListItemText primary="Kurta" />
+              <ListItemText onClick={() => {getMensData(1, "Kurta")}} primary="Kurta" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem key={3} disablePadding>
             <ListItemButton>
              
-              <ListItemText primary="500-1000" />
+              <ListItemText onClick={() => {getMensData(1, null, 500)}} primary="500-1000" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem key={4} disablePadding>
             <ListItemButton>
              
               <ListItemText primary="Color" />
