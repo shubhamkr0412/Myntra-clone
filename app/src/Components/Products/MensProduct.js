@@ -12,9 +12,8 @@ const MensProduct = ({ lists, addToCart }) => {
             <>
               <div className="inside" key={curr.id}>
               <div className="items">
-                <img width={"50%"} src={curr.img}/>
+                 <img width={"60%"} src={curr.img}/>
                 </div>
-
                 <div className="items">
                   <p>
                     <span>Name:</span>

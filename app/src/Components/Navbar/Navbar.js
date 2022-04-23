@@ -96,7 +96,7 @@ const Navbar = ({ CartItems }) => {
             horizontal: 'right',
           }}
         >
-          {!CartItems.length?<MenuItem>No Items Added</MenuItem>:CartItems.map((item) => (
+          {CartItems && CartItems.map((item) => (
             <MenuItem>
               {item.Category} <br />
               {item.price}

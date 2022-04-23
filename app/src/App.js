@@ -20,6 +20,8 @@ import Navbar from './Components/Navbar/Navbar';
 
 
 function App() {
+  const port=process.env.PORT || 3005;
+  const command =`json-server --watch db.json --port $(port)`;
 
   return (
     
