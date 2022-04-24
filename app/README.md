@@ -4,6 +4,7 @@ This is the clone of Myntra.com.
 ```
 Disclamer:This Clone is used for only Educational Purposes.
 ```
+Deployed Link - https://myntra-new.vercel.app/
 
 ## Screenshots
 
