@@ -46,5 +46,5 @@ Prerequisites
 
 
 
-## Authors
+## Author
 - [Shubham Kumar](https://github.com/shubhamkr0412)
