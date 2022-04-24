@@ -8,10 +8,10 @@ Disclamer:This Clone is used for only Educational Purposes.
 ## Screenshots
 
 
-![App Screenshot](src/Components/images/img1.png)
+![App Screenshot](src/Components/images/img1.PNG)
 
-![App Screenshot](src/Components/images/img2.png)
-![App Screenshot](src/Components/images/img3.png)
+![App Screenshot](src/Components/images/img2.PNG)
+![App Screenshot](src/Components/images/img3.PNG)
 
 ## Technologies Used
 
