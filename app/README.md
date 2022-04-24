@@ -31,7 +31,7 @@ Prerequisites
   Installation
 - Clone the repository
   ```
-  Git Clone - https://github.com/alhassan069/AJIO
+  Git Clone - https://github.com/shubhamkr0412/Myntra-clone
   ```
 - Open the Project directory in terminal
   ```
@@ -46,3 +46,4 @@ Prerequisites
 
 
 ## Authors
+- [Shubham Kumar](https://github.com/shubhamkr0412)
